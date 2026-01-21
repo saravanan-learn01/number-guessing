@@ -1,0 +1,13 @@
+name : new-yaml-pipeline
+
+on:
+ push:
+  branch: master
+
+jobs:
+ build :
+  runs-on: windows
+
+  steps:
+  - name : build 
+    run: number-guessing.html
