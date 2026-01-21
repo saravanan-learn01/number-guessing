@@ -1,13 +1,18 @@
-name : new-yaml-pipeline
+name: new-yaml-pipeline
 
 on:
- push:
-  branches: master
+  push:
+    branches:
+      - master
 
 jobs:
- build :
-  runs-on: windows-latest
+  build:
+    runs-on: windows-latest
 
-  steps:
-  - name : build 
-    run: number-guessing.html
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Serve HTML file
+        run: |
+          python -m http.server 8000
