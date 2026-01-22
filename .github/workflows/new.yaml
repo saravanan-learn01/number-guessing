@@ -1,13 +1,19 @@
-name : new-yaml-pipeline
+name: new-yaml-pipeline
 
 on:
- push:
-  branch: master
+  push:
+    branches:
+      - master
 
 jobs:
- build :
-  runs-on: windows
+  build:
+    runs-on: windows-latest
 
-  steps:
-  - name : build 
-    run: number-guessing.html
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Build
+        run: |
+          echo "Running build step"
+          # Add your actual build commands here, e.g., running a script or compiling code
