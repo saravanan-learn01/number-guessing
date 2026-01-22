@@ -14,6 +14,4 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Build
-        run: |
-          echo "Running build step"
-          # Add your actual build commands here, e.g., running a script or compiling code
+        run: python number-game.py
