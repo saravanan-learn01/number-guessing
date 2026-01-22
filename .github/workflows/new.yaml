@@ -6,12 +6,12 @@ on:
       - main
 
 jobs:
-  Build:
-    runs-on: ubuntu-latest
+    Build:
+      runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+      steps:
+        - name: Checkout repository
+          uses: actions/checkout@v3
 
-      - name: Build
-        run: python number-game.py 76
+        - name: new
+          run: python number-game.py 76
