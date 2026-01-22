@@ -13,5 +13,5 @@ jobs:
         - name: Checkout repository
           uses: actions/checkout@v3
 
-        - name: new
+        - name: Build
           run: python number-game.py 76
