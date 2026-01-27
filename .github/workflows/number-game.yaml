@@ -1,0 +1,25 @@
+name: Number Guessing Game Action
+
+on:
+  workflow_dispatch:
+    inputs:
+      guess:
+        description: 'Your guess (integer between 1 and 100)'
+        required: true
+        type: number
+
+jobs:
+  play-game:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.x'
+
+    - name: Run number guessing game
+      run: python your_script.py ${{ github.event.inputs.guess }}
