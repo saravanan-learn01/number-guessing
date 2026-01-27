@@ -22,4 +22,4 @@ jobs:
         python-version: '3.x'
 
     - name: Run number guessing game
-      run: python your_script.py ${{ github.event.inputs.guess }}
+      run: python number-game.py ${{ github.event.inputs.guess }}
