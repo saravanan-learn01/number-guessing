@@ -6,13 +6,18 @@ on:
       - main
 
 jobs:
-    Build:
+    Builds:
       runs-on: ubuntu-latest
 
       steps:
         - name: Checkout repository
           uses: actions/checkout@v3
 
+<<<<<<< HEAD
         - name: number 
           # run: python number-game.py 55
           uses: actions/number-game
+=======
+        - name: Build
+          run: python number-game.py 76
+>>>>>>> ddd92482a078c59867d5e7ec3f562739b0e0a053
